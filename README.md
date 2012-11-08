@@ -8,7 +8,7 @@ Representing data in such a way results in tree-like structures that are already
 
 Leaves are the only relations connecting a pile with the outside world. A leave is usually called _Top_ in a pile system and it denotes a relation pointing to a logically atomic data item in the outside world of data containers such as a bit, a character, a row in a relational database, a document or an URI. In the lingo of "pile-ists" such a data item is usually called a _Top Value_ for obvious reasons.
 
-Ralf Westphal has written an excellent introduction to pile systems titled [_A Journey Into The Pile Universe_](http://www.lawsofform.de/wp-content/uploads/2006/05/RalfWestphalBlog.pdf) and another one dealing more with aspects of his [implementation of a pile system](http://sourceforge.net/projects/pileworks/) called [_Freeing Data From the Silos - A Relationistic Approach to Information Processing_](http://www.pilesys.com/new/Documents/Freeingdatafromthesilos-Pileexplained.pdf).
+Ralf Westphal has written an excellent introduction to pile systems titled [_A Journey Into The Pile Universe_](http://www.lawsofform.de/wp-content/uploads/2006/05/RalfWestphalBlog.pdf). Unfortunately, another good article written by Ralf Westphal called _Freeing Data From the Silos - A Relationistic Approach to Information Processing_ seems to be no longer available online.
 
 Java implementation
 -------------------
