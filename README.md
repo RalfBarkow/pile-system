@@ -19,10 +19,15 @@ One should be aware that the pile agent is not one hundred percent free of bugs.
 Further information
 -------------------
 Information and resources on the web:
-* There is a [SourceForge repository](http://sourceforge.net/projects/pileworks/) containing two different reference implementations of a pile system. One was written by Erez Elul and Miriam Bedoni and is C++ only. It seems to be highly optimized and efficient, but is hard to understand due to its dense coding style, advanced data structure concepts and lack of illustrative documentation. The other one was developed by Ralf Westphal as a hybrid C#/C++ implementation. Besides the pile core (basically consisting of only a pile engine and a pile space) it also contains built on top of the pile core a simple pile agent serving as a text search engine. (This search engine seems to work in most cases, but still fails for some.)
+* There is a [sourceforge repository](http://sourceforge.net/projects/pileworks/) containing two different reference implementations of a pile system. One was written by Erez Elul and Miriam Bedoni and is C++ only. It seems to be highly optimized and efficient, but is hard to understand due to its dense coding style, advanced data structure concepts and lack of illustrative documentation. The other one was developed by Ralf Westphal as a hybrid C#/C++ implementation. Besides the pile core (basically consisting of only a pile engine and a pile space) it also contains built on top of the pile core a simple pile agent serving as a text search engine. (This search engine seems to work in most cases, but still fails for some.)
+* This [google project site on pile systems](http://code.google.com/p/pile/) seems to hold exactly the same code base as the already linked sourceforge repository.
 * [Ralf Westphal's (old) blog](http://weblogs.asp.net/ralfw/archive/tags/Pile/default.aspx) contains multiple helpful and introductory articles. Unfortunately, all the illustrating pictures seem to be gone. His new blog can be found on http://blog.ralfw.de/.
 * [Ralf Barkow's blog](http://ralfbarkow.wordpress.com/) covers some more theoretical ground on the foundations of pile systems.
 * [Andreas Mertens in his blog](http://www.lawsofform.de/pile/) offers (amongst other material) JNI-wrapper classes for the C++ reference implementation by Erez Elul and Miriam Bedoni.
 * As Ralf Barkow mentions in [this blog post](http://ralfbarkow.wordpress.com/2006/06/21/the-cauchycantor-diagonal-method/) the [Cauchy/Cantor method described by W. T. Hardgrave 1976](http://dl.acm.org/citation.cfm?doid=942574.807126) or some method similar to it is used internally in both reference implementations to store and retrieve relations.
 * A more philosophical foundation and perspective can be found in Peter Krieg's book "Die Paranoide Maschine: Computer zwischen Wahn und Sinn", Publisher Heise Heinz, 2005. ISBN-10: 3936931186, ISBN-13: 978-3936931181. 
 * On an even deeper level, pile systems are related to Gotthard Günther's fascinating an pioneering work on Kenogrammatik, Morphogrammatik and proemial relations.
+
+License
+-------
+This software is distributed under the GNU GPL v2 license.
