@@ -2,7 +2,7 @@ Java implementation of a pile system
 ====================================
 Introduction
 ------------
-A _Pile_, or also called _Pile System_ by their inventors, is a (not so new, after all) paradigm of structuring and processing data. Whereas traditionally a metaphor of nested hierarchical containers is used to represent and process data - for instance words containing bytes containing bits, or tables containing rows containing fields -, pile systems take a radically different, a radically relational approach. In pile system, data in its basic form is represented as a tree-like, recursive structure of relations pointing to other relations - a "pile or a heap of relations". In its most basic form, a relation is hereby defined recursively as a directed edge pointing from one node to another, where both source and target nodes are relations themselves. Relations themselves are not and do not serve as "data containers". This means, they do not logically hold or represent any atomic data item (bits or bytes or whatever) per se. Thus, as long as we neglect the necessity of physical implementation, relations do not have an ontological identity themselves. However, at the same time this pile of relations in its entirety makes up an algorithm on how to (re-)build the original data it represents. Similar to the Lisp or Clojure programming languages, pile systems are thus [homoiconic](http://en.wikipedia.org/wiki/Homoiconicity).
+A _Pile_, or also called _Pile System_ by their inventors, is a (not so new, after all) paradigm of structuring and processing data. Whereas traditionally a metaphor of nested hierarchical containers is used to represent and process data - for instance words containing bytes containing bits, or tables containing rows containing fields -, pile systems take a radically different, a radically relational approach. In a pile system, data in its basic form is represented as a recursive, tree-like structure of relations pointing to other relations - a "pile or a heap of relations". A relation is hereby defined recursively as a directed edge pointing from one node to another, where both source and target nodes are relations themselves. Relations are not and do not serve as "data containers". This means, they do not logically hold or represent any atomic data item (bits or bytes or whatever) per se. Thus, as long as we neglect the necessity of physical implementation, relations do not have an ontological identity themselves. However, at the same time this pile of relations in its entirety makes up an algorithm on how to (re-)build the original data it represents. Similar to the Lisp or Clojure programming languages, pile systems are thus [homoiconic](http://en.wikipedia.org/wiki/Homoiconicity).
 
 Representing data in such a way results in tree-like structures that are already known in computer science as _binary decision diagrams (BDD)_. However, pile system as an engineering approach or a metaphor literally turns things (or trees) upside down. Unlike binary decision diagrams, pile systems are defined, designed and built from their leaves, not from their root. They are also not so much concerned with "taking decisions" or representing binary functions, but they aim at enabling a different way of data representation and processing. Taking such a perspective has consequences that extend far beyond simple attempts to restructure data and are out of the scope of this introduction.
 
@@ -10,8 +10,8 @@ Leaves are the only relations connecting a pile with the outside world. A leave 
 
 Ralf Westphal has written an excellent introduction to pile systems titled [_A Journey Into The Pile Universe_](http://www.lawsofform.de/wp-content/uploads/2006/05/RalfWestphalBlog.pdf). Unfortunately, another good article written by Ralf Westphal called _Freeing Data From the Silos - A Relationistic Approach to Information Processing_ seems to be no longer available online.
 
-Java implementation
--------------------
+Implementation remarks
+----------------------
 This Java implementation very closely follows Ralph Westphal's hybrid C++/C# reference implementation. All the original naming was kept the same, and only where Java did not offer the same language concepts as C++ or C# small deviations from the original implementation were introduced. The goal was to build a simple, running prototype written purely in Java for demonstration purposes, not thinking of efficiency or completeness. Nevertheless the pile engine in its current state should actually be pretty computationally efficient (in terms of Java efficiency). When it comes to storing and retrieving texts there might be better algorithms than the ones implemented in the pile agent, especially so for dedicated text processing purposes. For instance, if processing natural, written language whole words instead of only characters could be stored as top values. Or for protein and genomic analysis, different storing, retrieving and search algorithms might turn out to be more efficient.
 
 One should be aware that the pile agent is not one hundred percent free of bugs. For instance, in a text string "peter petra petro" three instances of the search string "etr" are found instead of just two.
@@ -19,10 +19,10 @@ One should be aware that the pile agent is not one hundred percent free of bugs.
 Project structure
 -----------------
 Directory structure:
-* _src_: Contains the source code (.java files)
-* _bin_: Contains the byte code (.class files)
-* _test_: Contains JUnit 4 test cases
-* _data_: Contains some simple input data files
+* _/src_: Contains the source code (.java files)
+* _/bin_: Contains the byte code (.class files)
+* _/test_: Contains JUnit 4 test cases
+* _/data_: Contains some simple input data files
 
 Package structure in the source directory:
 * _pile_: the main class
@@ -30,6 +30,20 @@ Package structure in the source directory:
 * _pile.text_: a pile agent for a text search engine
 * _pile.ui_: classes for the (Swing) graphical user interface
 * _pile.util_: Some helpful classes
+
+Getting started
+---------------
+The program runs on Java v1.6. No third party libraries are required. Simply start the program by calling its main method in PileMain.class:
+
+$> cd <install-dir>/bin
+$> java pile.PileMain
+
+Some sample input texts can be found in the /data directory.
+
+Requirements
+------------
+* Java v1.6 or newer
+* Input files must contain US-ASCII characters only
 
 Further information
 -------------------
