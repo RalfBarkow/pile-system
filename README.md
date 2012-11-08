@@ -35,8 +35,9 @@ Getting started
 ---------------
 The program runs on Java v1.6. No third party libraries are required. Simply start the program by calling its main method in PileMain.class:
 
-$> cd <install-dir>/bin
-$> java pile.PileMain
+`$> cd <install-dir>/bin`
+
+`$> java pile.PileMain`
 
 Some sample input texts can be found in the /data directory.
 
